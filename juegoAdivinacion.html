@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>Juego Adivinacion</h3>
+        <script>
+            function saltarLinea(){
+                document.write("<br>");
+            }
+            function imprimir(texto){
+                saltarLinea();
+                document.write(texto);
+            }
+            var intentos = 3, i=1;
+            var numeroPensado=Math.round(Math.random()*10);//Devuelve numero entre 0 y 10
+            while(i<=intentos){
+                var numeroLanzado=parseInt(prompt("Ingrese numeros del 0 al 10:")); 
+                if(numeroLanzado==numeroPensado){
+                    alert("Has acertado en el intento: " + i+ ". El numero pensado era: " + numeroPensado);
+                    break;//interrumpe el bucle
+                }
+                else if(numeroLanzado<0 || numeroLanzado>10){
+                    alert("Numero fuera de rango");
+                }
+                else{
+                    alert("Has fallado! ");
+                }
+                i++;
+            }
+            if(numeroLanzado==numeroPensado)
+                imprimir("Has acertado en el intento: " + i+ ". El numero pensado era: " + numeroPensado);
+            else
+                imprimir("Has fallado! El numero pensado era "+numeroPensado);
+        </script>
+    </body>
+</html>

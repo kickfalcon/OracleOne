@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>Inicio de Sesion</h3>
+        <script>
+            var inicioDeSesionRegistrado="Alura";
+            var contrasenhaRegistrado="alura321";
+            var intentos=3, i=1;
+            while(i<=intentos){
+                var inicioDeSesion=prompt("Ingrese su usuario: ");
+                var contrasenha=prompt("Ingrese su contraseña: ");
+                if(inicioDeSesion==inicioDeSesionRegistrado && contrasenha==contrasenhaRegistrado){
+                    alert("Bienvenido " + inicioDeSesion);
+                    break;
+                }
+                else{
+                    alert("Usuario o contraseña incorrectos");
+                }
+                i++;
+            }
+        </script>
+    </body>
+</html>

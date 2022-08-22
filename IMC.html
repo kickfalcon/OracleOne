@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>¿Quién es mayor?</h3>
+        <script>
+            function saltarLinea(){
+                document.write("<br>");
+            }
+            function imprimir(texto){
+                saltarLinea();
+                document.write(texto);
+            }
+            function calcularIMC(weight,height){
+                return (weight/(height*height));
+            }
+            function diagnosticoIMC(indice){
+                if(indice<18.5){
+                    imprimir("Peso por debajo de lo recomendado");
+                }
+                else if(indice>=18.5 && indice<25){
+                    imprimir("Peso ideal");
+                }
+                else if(indice>=25 && indice<30){
+                    imprimir("Sobrepeso");
+                }
+                else{
+                    imprimir("Obesidad");
+                }
+            }
+            /*var peso1=118,estatura1=1.70;
+            var peso2=80,estatura2=1.60;
+            var peso3=54,estatura3=1.90;
+            var name1="Edgar";
+            var name2="Juan";
+            var name3="Pedro";
+            calcularIMC(peso1,estatura1, name1);
+            calcularIMC(peso2,estatura2, name2);
+            calcularIMC(peso3,estatura3, name3);*/
+
+            var peso=prompt("Introduce tu peso: "); 
+            var altura=prompt("Introduce tu altura: ");
+            imc=calcularIMC(peso,altura);
+            imprimir("Tu IMC es "+imc);
+            diagnosticoIMC(imc);
+        </script>
+    </body>
+</html>

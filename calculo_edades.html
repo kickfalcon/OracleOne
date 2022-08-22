@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>¿Quién es mayor?</h3>
+        <script>
+            function saltarLinea(){
+                document.write("<br>");
+            }
+            function imprimir(texto){
+                saltarLinea();
+                document.write(texto);
+            }
+            function compararEdad(edad1,edad2,edad3){
+                var dif1=edad1-edad2;
+                var dif2=edad1-edad3;
+                var dif3=edad2-edad3;
+                imprimir("La diferencia entre "+edad1+" y "+edad2+" es "+dif1);
+                imprimir("La diferencia entre "+edad1+" y "+edad3+" es "+dif2);
+                imprimir("La diferencia entre "+edad2+" y "+edad3+" es "+dif3);
+            }
+            var miEdad=23, edadAmigo=21, edadHermano=20;
+            imprimir("Mi edad es "+miEdad+" y la edad de mi amigo es "+edadAmigo+" y la edad de mi hermano es "+edadHermano+".");
+            compararEdad(miEdad,edadAmigo,edadHermano);
+        </script>
+    </body>
+</html>

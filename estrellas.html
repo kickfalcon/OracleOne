@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>Estrellas</h3>
+        <script>
+            function saltarLinea(){
+                document.write("<br>");
+                document.write("<br>");
+            }
+            function imprimir(texto){
+                saltarLinea();
+                document.write(texto);
+            }
+            for(var lineas=1; lineas<=10; lineas++){
+                for(var columna=1; columna<=20; columna++){
+                    document.write("*");
+                }
+                saltarLinea();
+            }
+            imprimir("Fin");
+        </script>
+    </body>
+</html>
